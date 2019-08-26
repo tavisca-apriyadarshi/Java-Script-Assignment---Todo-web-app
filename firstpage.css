@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:Tahoma, Geneva, sans-serif;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background:Teal;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+/* Left column */
+.left {
+  float: left;
+  width: 25%;
+  height: 600px;
+  position: relative;
+}
+
+#myTable{
+  margin-top: 20%;
+}
+/* Right column */
+.right {
+  float: left;
+  width: 75%;
+  height: 600px;
+  background-color: #f1f1f1;
+  border-left: 2px solid black;
+  padding-left: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 120px;
+  background-color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+li {
+  text-align: center;
+  border-bottom: 1px solid #555;
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+/* Change the link color on hover */
+li hover {
+  background-color: #555;
+  color: white;
+}
+
+#todo, #user, #develop, #logout{
+  display: none;
+}
+
+#myInput {
+  width: 50%;
+  font-family:Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  position: relative;
+}
+
+.button{
+  width:auto;
+  font-family:Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  position: relative;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  display: none;
+}
+
+#myUL li {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li hover:not(.header) {
+  background-color: #eee;
+}

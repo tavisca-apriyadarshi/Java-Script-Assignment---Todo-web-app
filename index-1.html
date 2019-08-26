@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" type="text/css" href="search_CSS.css">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: none;
+  background-color: none;
+  width: 15%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: #222;
+  color: LightYellow;
+  padding: 12px 10px;
+  width: 100%;
+  border: none;
+  margin: 10px;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: grey;
+  color: black;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #0090CB;
+  color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 12px 12px;
+  border: 1px solid #ccc;
+  width: 85%;
+  border: none;
+  min-height: 300px;
+  float: right;
+  background-color: LightYellow;
+}
+#addRow:hover{
+  padding: 10px; 
+  border-radius: 15px; 
+  margin-left: 20px; 
+  background-color: green;
+  color: white;
+}
+#addRow{
+  cursor: pointer; 
+  padding: 10px; 
+  border-radius: 15px; 
+  margin-left: 20px; 
+  background-color: #0090CB;
+}
+
+#searchRow:hover{
+   
+  border-radius: 15px; 
+   
+  background-color: green;
+  color: white;
+}
+#searchRow{
+  cursor: pointer; 
+   
+  border-radius: 15px; 
+   
+  background-color: #0090CB;
+}
+</style>
+</head>
+<body onload="createTable()">
+
+<header>
+      <h1><img src="list3.png" height="30px" width="30px" /> &nbsp TODO</h1>
+</header>
+
+<div class="tab">
+  <center>
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen"><b>TODO</b></button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')"><b>USER</b></button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')"><b>PROFILE</b></button>
+  </center>
+</div>
+
+<center>
+<div id="London" class="tabcontent">
+  <center>
+    <article>
+            <p>
+                <div autocomplete="off" >
+                  <div class="autocomplete" style="width:50%;">
+                    <input id="myInput" type="text" name="myCountry" placeholder="Search for the task...">
+                  </div>
+                  <input type="button" id="searchRow" value="search Task" onclick="searchList()"/>
+                  <input type="button" id="addRow" value="Add A Task" onclick="addRow()"/>
+                </div>            </p>
+            <div id="cont"></div>
+            <table id = "searched-item" style="display: none;">
+              <tr>
+                <td></td>
+                <td>Tasks To Do</td><td>Edit</td><td>Remove</td>
+              </tr>
+            </table>
+      </article>
+    </center>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <article><h3>Nothing to display in User Yet...</h3></article> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <article><h3>Nothing to display in Profile Yet...</h3></article>
+</div>
+</center>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  if(cityName == 'London'){
+        document.getElementById("empTable").style.display = "block";
+        document.getElementById("searched-item").style.display = "none";
+  }
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   <footer>
+      <p>-By Akshay Rai Priyadarshi <br> For The First JavaScript Assignment.</p>
+    </footer> 
+  <script type="text/javascript" src="MyJS_file.js"></script>    
+</body>
+</html> 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO List Application</title>
+
+   <link rel="stylesheet" type="text/css" href="styles.css"/>
+   <script type="text/javascript" src="MyJS_file.js"></script>
+</head>
+
+
+<body onload="createTable()">
+    <header>
+      <h1><img src="list2.jpg" height="70px" width="70px" /> TODO</h1>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li><button onclick="call_TODO()" class="button"><b>TODO</b></button></li>
+          <li><button onclick="call_User()" class="button"><b>USER</b></button></li>
+          <li><button onclick="call_Profile()" class="button"><b>PROFILE</b></button></li>
+        </ul>
+      </nav>
+      
+      <div id="TODO_div">
+          <center><article>
+            <p>
+                <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="Search for the task..." title="Type in a name" style="padding: 10px"/><input type="button" id="addRow" value="Add A Task" onclick="addRow()" style="padding: 10px; margin-left: 20px" />
+
+            </p>
+            <div id="cont"></div>
+
+        </article>
+    </center>
+    </div>
+    <div id="User_div"><article><h3>Nothing to display in User Yet...</h3></article></div>
+    <div id="Profile_div"><article><h3>Nothing to display in Profile Yet...</h3></article></div>
+
+    </section> 
+    <footer>
+      <p>-By Akshay Rai Priyadarshi <br> For The First JavaScript Assignment.</p>
+    </footer>    
+</body>
+
+</html>
